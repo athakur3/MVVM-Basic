@@ -15,6 +15,12 @@
 		B9816BFD2550493C00876C09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9816BFB2550493C00876C09 /* LaunchScreen.storyboard */; };
 		B9816C082550493D00876C09 /* MVVM_BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C072550493D00876C09 /* MVVM_BasicsTests.swift */; };
 		B9816C132550493D00876C09 /* MVVM_BasicsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C122550493D00876C09 /* MVVM_BasicsUITests.swift */; };
+		B9816C2525504A0800876C09 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C2425504A0800876C09 /* UserModel.swift */; };
+		B9816C3E25504C2800876C09 /* SingleSignOnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C3D25504C2800876C09 /* SingleSignOnViewController.swift */; };
+		B9816C542550517100876C09 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C522550517100876C09 /* ProfileCollectionViewCell.swift */; };
+		B9816C552550517100876C09 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9816C532550517100876C09 /* ProfileCollectionViewCell.xib */; };
+		B9816C89255055DA00876C09 /* SingleSignOnConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */; };
+		B9816C9125505A8700876C09 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C9025505A8700876C09 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		B9816C0E2550493D00876C09 /* MVVM BasicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM BasicsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9816C122550493D00876C09 /* MVVM_BasicsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_BasicsUITests.swift; sourceTree = "<group>"; };
 		B9816C142550493D00876C09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9816C2425504A0800876C09 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B9816C3D25504C2800876C09 /* SingleSignOnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSignOnViewController.swift; sourceTree = "<group>"; };
+		B9816C522550517100876C09 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9816C532550517100876C09 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSignOnConstants.swift; sourceTree = "<group>"; };
+		B9816C9025505A8700876C09 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,9 @@
 		B9816BEF2550493A00876C09 /* MVVM Basics */ = {
 			isa = PBXGroup;
 			children = (
+				B9816C3925504BFB00876C09 /* Single Sign On Module */,
+				B9816C3225504A8F00876C09 /* Sign Up Module */,
+				B9816C23255049F800876C09 /* Login Module */,
 				B9816BF02550493A00876C09 /* AppDelegate.swift */,
 				B9816BF22550493A00876C09 /* SceneDelegate.swift */,
 				B9816BF42550493A00876C09 /* ViewController.swift */,
@@ -126,6 +141,121 @@
 				B9816C142550493D00876C09 /* Info.plist */,
 			);
 			path = "MVVM BasicsUITests";
+			sourceTree = "<group>";
+		};
+		B9816C23255049F800876C09 /* Login Module */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C2E25504A4A00876C09 /* View Models */,
+				B9816C2D25504A4300876C09 /* Views */,
+				B9816C2C25504A3B00876C09 /* Models */,
+			);
+			path = "Login Module";
+			sourceTree = "<group>";
+		};
+		B9816C2C25504A3B00876C09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9816C2D25504A4300876C09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9816C2E25504A4A00876C09 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B9816C3225504A8F00876C09 /* Sign Up Module */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C3525504AA500876C09 /* View Models */,
+				B9816C3425504A9C00876C09 /* Views */,
+				B9816C3325504A9700876C09 /* Models */,
+			);
+			path = "Sign Up Module";
+			sourceTree = "<group>";
+		};
+		B9816C3325504A9700876C09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9816C3425504A9C00876C09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9816C3525504AA500876C09 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B9816C3925504BFB00876C09 /* Single Sign On Module */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C87255055CB00876C09 /* Constants */,
+				B9816C3C25504C0D00876C09 /* View Models */,
+				B9816C3B25504C0900876C09 /* Models */,
+				B9816C3A25504C0500876C09 /* Views */,
+				B9816C3D25504C2800876C09 /* SingleSignOnViewController.swift */,
+			);
+			path = "Single Sign On Module";
+			sourceTree = "<group>";
+		};
+		B9816C3A25504C0500876C09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C592550528D00876C09 /* Profile Cell View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9816C3B25504C0900876C09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C2425504A0800876C09 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B9816C3C25504C0D00876C09 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C9025505A8700876C09 /* ProfileViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		B9816C592550528D00876C09 /* Profile Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C522550517100876C09 /* ProfileCollectionViewCell.swift */,
+				B9816C532550517100876C09 /* ProfileCollectionViewCell.xib */,
+			);
+			path = "Profile Cell View";
+			sourceTree = "<group>";
+		};
+		B9816C87255055CB00876C09 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +363,7 @@
 			files = (
 				B9816BFD2550493C00876C09 /* LaunchScreen.storyboard in Resources */,
 				B9816BFA2550493C00876C09 /* Assets.xcassets in Resources */,
+				B9816C552550517100876C09 /* ProfileCollectionViewCell.xib in Resources */,
 				B9816BF82550493A00876C09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +392,11 @@
 				B9816BF52550493A00876C09 /* ViewController.swift in Sources */,
 				B9816BF12550493A00876C09 /* AppDelegate.swift in Sources */,
 				B9816BF32550493A00876C09 /* SceneDelegate.swift in Sources */,
+				B9816C2525504A0800876C09 /* UserModel.swift in Sources */,
+				B9816C542550517100876C09 /* ProfileCollectionViewCell.swift in Sources */,
+				B9816C89255055DA00876C09 /* SingleSignOnConstants.swift in Sources */,
+				B9816C9125505A8700876C09 /* ProfileViewModel.swift in Sources */,
+				B9816C3E25504C2800876C09 /* SingleSignOnViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
