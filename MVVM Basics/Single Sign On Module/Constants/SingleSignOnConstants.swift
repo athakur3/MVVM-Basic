@@ -11,4 +11,4 @@ import UIKit
 let edgeInsetsForProfileCollectionView: CGFloat = 16.0
 let interRowSpacingForProfileCollectionView: CGFloat = 10.0
 let interItemSpacingInRowForProfileCollectionView: CGFloat = 10.0
-let numberOfItemsInRowForProfileCollectionView: CGFloat = 2.0
+let numberOfItemsInRowForProfileCollectionView: CGFloat = 2

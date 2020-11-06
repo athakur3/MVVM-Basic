@@ -55,8 +55,8 @@ extension SingleSignOnViewController: UICollectionViewDelegateFlowLayout, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.reuseId, for: indexPath) as! ProfileCollectionViewCell
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.reuseId, for: indexPath)
         return cell
         
     }
@@ -67,9 +67,11 @@ extension SingleSignOnViewController: UICollectionViewDelegateFlowLayout, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let dimension = (view.frame.width - 2 * edgeInsetsForProfileCollectionView - interItemSpacingInRowForProfileCollectionView) / numberOfItemsInRowForProfileCollectionView
+        let x_ = numberOfItemsInRowForProfileCollectionView
         
-        return CGSize(width: dimension, height: dimension)
+        let dimension = (view.frame.width - 2 * edgeInsetsForProfileCollectionView - (x_ - 1) * interItemSpacingInRowForProfileCollectionView) / x_
+        
+        return CGSize(width: floor(dimension), height: floor(dimension))
         
     }
     
