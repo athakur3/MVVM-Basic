@@ -9,6 +9,8 @@ import UIKit
 
 class SingleSignOnViewController: UIViewController {
     
+    // TODO 2: Create Data Source Variables.
+    
     @IBOutlet weak var createProfileButton: UILabel!
     @IBOutlet weak var profileCollectionView: UICollectionView!
     
@@ -24,6 +26,9 @@ class SingleSignOnViewController: UIViewController {
         super.viewDidLoad()
         
         setupTapGestureForProfileButton()
+        
+        // TODO 1: Read JSON FILE
+        
         setupCollectionView()
         
     }
@@ -38,7 +43,6 @@ class SingleSignOnViewController: UIViewController {
     }
     
     fileprivate func setupCollectionView() {
-        // TODO:- Setup CollectionView
         profileCollectionView.register(UINib(nibName: ProfileCollectionViewCell.nibName, bundle: Bundle.main), forCellWithReuseIdentifier: ProfileCollectionViewCell.reuseId)
         profileCollectionView.delegate = self
         profileCollectionView.dataSource = self
@@ -56,6 +60,8 @@ extension SingleSignOnViewController: UICollectionViewDelegateFlowLayout, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.reuseId, for: indexPath) as! ProfileCollectionViewCell
+        
+        // TODO 5: SET image and label text
         
         return cell
         

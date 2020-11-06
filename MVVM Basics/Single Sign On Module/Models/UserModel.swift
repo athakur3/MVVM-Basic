@@ -7,6 +7,7 @@
 
 import Foundation
 
+// TODO 3: Setup Decodable
 struct User {
     var firstName: String
     var lastName: String

@@ -15,12 +15,31 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var userImage: UIImageView!
     
     // NOT READY YET WITH ALL FRAMES!!!!!
-    override func awakeFromNib() {
+    override func awakeFromNib() { // NIB PE JO THA, WAHI UTHA LIYA
         super.awakeFromNib()
         
         layer.cornerRadius = 12.0
         layer.borderColor = UIColor.black.withAlphaComponent(0.6).cgColor
         layer.borderWidth = 0.5
+        
+        /*
+         
+         Solution 1.
+         
+         UIView.animate(withDuration: 0.0) {
+             self.layoutIfNeeded()
+         } completion: { (value) in
+             self.userImage.layer.cornerRadius = self.userImage.frame.width / 2.0
+         }
+         
+         */
+        
+        // Solution 2.
+        
+        DispatchQueue.main.async {
+            self.layoutIfNeeded()
+            self.userImage.layer.cornerRadius = self.userImage.frame.width / 2.0
+        }
         
     }
     
