@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B9816BF12550493A00876C09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816BF02550493A00876C09 /* AppDelegate.swift */; };
 		B9816BF32550493A00876C09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816BF22550493A00876C09 /* SceneDelegate.swift */; };
-		B9816BF52550493A00876C09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816BF42550493A00876C09 /* ViewController.swift */; };
 		B9816BF82550493A00876C09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9816BF62550493A00876C09 /* Main.storyboard */; };
 		B9816BFA2550493C00876C09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9816BF92550493C00876C09 /* Assets.xcassets */; };
 		B9816BFD2550493C00876C09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9816BFB2550493C00876C09 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		B9816C552550517100876C09 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9816C532550517100876C09 /* ProfileCollectionViewCell.xib */; };
 		B9816C89255055DA00876C09 /* SingleSignOnConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */; };
 		B9816C9125505A8700876C09 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C9025505A8700876C09 /* ProfileViewModel.swift */; };
+		D6CB93642556E3810074D7B9 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CB93632556E3810074D7B9 /* Data.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		B9816BED2550493A00876C09 /* MVVM Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9816BF02550493A00876C09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9816BF22550493A00876C09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B9816BF42550493A00876C09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9816BF72550493A00876C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9816BF92550493C00876C09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9816BFC2550493C00876C09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		B9816C532550517100876C09 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSignOnConstants.swift; sourceTree = "<group>"; };
 		B9816C9025505A8700876C09 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D6CB93632556E3810074D7B9 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +111,12 @@
 		B9816BEF2550493A00876C09 /* MVVM Basics */ = {
 			isa = PBXGroup;
 			children = (
+				D6CB93622556E32A0074D7B9 /* JSON Data */,
 				B9816C3925504BFB00876C09 /* Single Sign On Module */,
 				B9816C3225504A8F00876C09 /* Sign Up Module */,
 				B9816C23255049F800876C09 /* Login Module */,
 				B9816BF02550493A00876C09 /* AppDelegate.swift */,
 				B9816BF22550493A00876C09 /* SceneDelegate.swift */,
-				B9816BF42550493A00876C09 /* ViewController.swift */,
 				B9816BF62550493A00876C09 /* Main.storyboard */,
 				B9816BF92550493C00876C09 /* Assets.xcassets */,
 				B9816BFB2550493C00876C09 /* LaunchScreen.storyboard */,
@@ -258,6 +258,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		D6CB93622556E32A0074D7B9 /* JSON Data */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB93632556E3810074D7B9 /* Data.json */,
+			);
+			path = "JSON Data";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -361,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6CB93642556E3810074D7B9 /* Data.json in Resources */,
 				B9816BFD2550493C00876C09 /* LaunchScreen.storyboard in Resources */,
 				B9816BFA2550493C00876C09 /* Assets.xcassets in Resources */,
 				B9816C552550517100876C09 /* ProfileCollectionViewCell.xib in Resources */,
@@ -389,7 +398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9816BF52550493A00876C09 /* ViewController.swift in Sources */,
 				B9816BF12550493A00876C09 /* AppDelegate.swift in Sources */,
 				B9816BF32550493A00876C09 /* SceneDelegate.swift in Sources */,
 				B9816C2525504A0800876C09 /* UserModel.swift in Sources */,

@@ -14,6 +14,7 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var userImage: UIImageView!
     
+    @IBOutlet var userName: UILabel!
     // NOT READY YET WITH ALL FRAMES!!!!!
     override func awakeFromNib() { // NIB PE JO THA, WAHI UTHA LIYA
         super.awakeFromNib()

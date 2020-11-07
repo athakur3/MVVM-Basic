@@ -7,13 +7,14 @@
 
 import Foundation
 
-// TODO 3: Setup Decodable
-struct User {
+
+struct User: Codable {
+    var id: Int
     var firstName: String
     var lastName: String
     var image: String
     var emailId: String
     var age: Int
-    var height: Int
+    var height: Double
     var weight: Int
 }

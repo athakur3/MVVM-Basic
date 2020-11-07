@@ -8,11 +8,10 @@
 import UIKit
 
 @available(iOS 13.0, *)
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    // TODO 0 BASIC: CREATE JSON FILE
-
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

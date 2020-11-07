@@ -9,7 +9,7 @@ import UIKit
 
 class SingleSignOnViewController: UIViewController {
     
-    // TODO 2: Create Data Source Variables.
+    var users = [User]()
     
     @IBOutlet weak var createProfileButton: UILabel!
     @IBOutlet weak var profileCollectionView: UICollectionView!
@@ -26,13 +26,23 @@ class SingleSignOnViewController: UIViewController {
         super.viewDidLoad()
         
         setupTapGestureForProfileButton()
-        
-        // TODO 1: Read JSON FILE
-        
+        fetchData()
         setupCollectionView()
         
     }
-
+    func fetchData(){
+        guard let filePath = Bundle.main.path(forResource: "Data", ofType: "json") else { return }
+        
+        do {
+            let data = try Data(contentsOf: URL(fileURLWithPath:  filePath), options: .mappedIfSafe)
+            users = try JSONDecoder().decode([User].self, from: data)
+        } catch {
+            print(error)
+            
+        }
+        
+    }
+    
     fileprivate func setupTapGestureForProfileButton() {
         let profileLabelTapGesture = UITapGestureRecognizer(target: self, action: #selector(profileLabelTapped(_:)))
         createProfileButton.addGestureRecognizer(profileLabelTapGesture)
@@ -54,14 +64,16 @@ class SingleSignOnViewController: UIViewController {
 extension SingleSignOnViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return users.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProfileCollectionViewCell.reuseId, for: indexPath) as! ProfileCollectionViewCell
         
-        // TODO 5: SET image and label text
+        
+        cell.userName.text = "\(users[indexPath.row].firstName) \(users[indexPath.row].lastName)"
+        cell.userImage.image = UIImage(named: users[indexPath.row].image)
         
         return cell
         
