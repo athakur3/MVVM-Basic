@@ -2,7 +2,7 @@
 //  SingleSignOnConstants.swift
 //  MVVM Basics
 //
-//  Created by Akshansh Thakur on 02/11/20.
+//  Created by Rajnish Raj on 02/11/20.
 //
 
 import Foundation
