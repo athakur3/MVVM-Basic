@@ -21,6 +21,12 @@
 		B9816C89255055DA00876C09 /* SingleSignOnConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */; };
 		B9816C9125505A8700876C09 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9816C9025505A8700876C09 /* ProfileViewModel.swift */; };
 		D6CB93642556E3810074D7B9 /* Data.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CB93632556E3810074D7B9 /* Data.json */; };
+		D6CB936925571B270074D7B9 /* ProfileCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB936825571B270074D7B9 /* ProfileCollectionView.swift */; };
+		D6CB936B25571B440074D7B9 /* ProfileCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6CB936A25571B440074D7B9 /* ProfileCollectionView.xib */; };
+		D6CB936E2557232B0074D7B9 /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CB936D2557232B0074D7B9 /* ProfileLabel.swift */; };
+		D6CE962F25589BF40067595A /* SignOnLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE962E25589BF40067595A /* SignOnLoginController.swift */; };
+		D6CE963125589D420067595A /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE963025589D420067595A /* ProfileModel.swift */; };
+		D6CE963425589EAD0067595A /* profile.json in Resources */ = {isa = PBXBuildFile; fileRef = D6CE963325589EAD0067595A /* profile.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +67,12 @@
 		B9816C88255055DA00876C09 /* SingleSignOnConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSignOnConstants.swift; sourceTree = "<group>"; };
 		B9816C9025505A8700876C09 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D6CB93632556E3810074D7B9 /* Data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data.json; sourceTree = "<group>"; };
+		D6CB936825571B270074D7B9 /* ProfileCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionView.swift; sourceTree = "<group>"; };
+		D6CB936A25571B440074D7B9 /* ProfileCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionView.xib; sourceTree = "<group>"; };
+		D6CB936D2557232B0074D7B9 /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
+		D6CE962E25589BF40067595A /* SignOnLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOnLoginController.swift; sourceTree = "<group>"; };
+		D6CE963025589D420067595A /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
+		D6CE963325589EAD0067595A /* profile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = profile.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +123,8 @@
 		B9816BEF2550493A00876C09 /* MVVM Basics */ = {
 			isa = PBXGroup;
 			children = (
-				D6CB93622556E32A0074D7B9 /* JSON Data */,
+				D6CB936F25572B8A0074D7B9 /* Sign On Login Module */,
 				B9816C3925504BFB00876C09 /* Single Sign On Module */,
-				B9816C3225504A8F00876C09 /* Sign Up Module */,
-				B9816C23255049F800876C09 /* Login Module */,
 				B9816BF02550493A00876C09 /* AppDelegate.swift */,
 				B9816BF22550493A00876C09 /* SceneDelegate.swift */,
 				B9816BF62550493A00876C09 /* Main.storyboard */,
@@ -143,71 +153,10 @@
 			path = "MVVM BasicsUITests";
 			sourceTree = "<group>";
 		};
-		B9816C23255049F800876C09 /* Login Module */ = {
-			isa = PBXGroup;
-			children = (
-				B9816C2E25504A4A00876C09 /* View Models */,
-				B9816C2D25504A4300876C09 /* Views */,
-				B9816C2C25504A3B00876C09 /* Models */,
-			);
-			path = "Login Module";
-			sourceTree = "<group>";
-		};
-		B9816C2C25504A3B00876C09 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B9816C2D25504A4300876C09 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B9816C2E25504A4A00876C09 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
-		B9816C3225504A8F00876C09 /* Sign Up Module */ = {
-			isa = PBXGroup;
-			children = (
-				B9816C3525504AA500876C09 /* View Models */,
-				B9816C3425504A9C00876C09 /* Views */,
-				B9816C3325504A9700876C09 /* Models */,
-			);
-			path = "Sign Up Module";
-			sourceTree = "<group>";
-		};
-		B9816C3325504A9700876C09 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		B9816C3425504A9C00876C09 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		B9816C3525504AA500876C09 /* View Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Models";
-			sourceTree = "<group>";
-		};
 		B9816C3925504BFB00876C09 /* Single Sign On Module */ = {
 			isa = PBXGroup;
 			children = (
+				D6CB93622556E32A0074D7B9 /* JSON Data */,
 				B9816C87255055CB00876C09 /* Constants */,
 				B9816C3C25504C0D00876C09 /* View Models */,
 				B9816C3B25504C0900876C09 /* Models */,
@@ -220,6 +169,8 @@
 		B9816C3A25504C0500876C09 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6CB936C2557230D0074D7B9 /* Profile Label */,
+				D6CB936725571AD40074D7B9 /* Profile Collection View */,
 				B9816C592550528D00876C09 /* Profile Cell View */,
 			);
 			path = Views;
@@ -262,6 +213,65 @@
 			isa = PBXGroup;
 			children = (
 				D6CB93632556E3810074D7B9 /* Data.json */,
+			);
+			path = "JSON Data";
+			sourceTree = "<group>";
+		};
+		D6CB936725571AD40074D7B9 /* Profile Collection View */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB936825571B270074D7B9 /* ProfileCollectionView.swift */,
+				D6CB936A25571B440074D7B9 /* ProfileCollectionView.xib */,
+			);
+			path = "Profile Collection View";
+			sourceTree = "<group>";
+		};
+		D6CB936C2557230D0074D7B9 /* Profile Label */ = {
+			isa = PBXGroup;
+			children = (
+				D6CB936D2557232B0074D7B9 /* ProfileLabel.swift */,
+			);
+			path = "Profile Label";
+			sourceTree = "<group>";
+		};
+		D6CB936F25572B8A0074D7B9 /* Sign On Login Module */ = {
+			isa = PBXGroup;
+			children = (
+				D6CE963225589E8D0067595A /* JSON Data */,
+				D6CE962B25589B900067595A /* Model */,
+				D6CE962D25589BAA0067595A /* Views */,
+				D6CE962C25589B9A0067595A /* View Model */,
+				D6CE962E25589BF40067595A /* SignOnLoginController.swift */,
+			);
+			path = "Sign On Login Module";
+			sourceTree = "<group>";
+		};
+		D6CE962B25589B900067595A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D6CE963025589D420067595A /* ProfileModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D6CE962C25589B9A0067595A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		D6CE962D25589BAA0067595A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D6CE963225589E8D0067595A /* JSON Data */ = {
+			isa = PBXGroup;
+			children = (
+				D6CE963325589EAD0067595A /* profile.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -373,6 +383,8 @@
 				B9816BFD2550493C00876C09 /* LaunchScreen.storyboard in Resources */,
 				B9816BFA2550493C00876C09 /* Assets.xcassets in Resources */,
 				B9816C552550517100876C09 /* ProfileCollectionViewCell.xib in Resources */,
+				D6CB936B25571B440074D7B9 /* ProfileCollectionView.xib in Resources */,
+				D6CE963425589EAD0067595A /* profile.json in Resources */,
 				B9816BF82550493A00876C09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,11 +411,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9816BF12550493A00876C09 /* AppDelegate.swift in Sources */,
+				D6CE962F25589BF40067595A /* SignOnLoginController.swift in Sources */,
 				B9816BF32550493A00876C09 /* SceneDelegate.swift in Sources */,
+				D6CE963125589D420067595A /* ProfileModel.swift in Sources */,
 				B9816C2525504A0800876C09 /* UserModel.swift in Sources */,
+				D6CB936E2557232B0074D7B9 /* ProfileLabel.swift in Sources */,
 				B9816C542550517100876C09 /* ProfileCollectionViewCell.swift in Sources */,
 				B9816C89255055DA00876C09 /* SingleSignOnConstants.swift in Sources */,
 				B9816C9125505A8700876C09 /* ProfileViewModel.swift in Sources */,
+				D6CB936925571B270074D7B9 /* ProfileCollectionView.swift in Sources */,
 				B9816C3E25504C2800876C09 /* SingleSignOnViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

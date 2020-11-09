@@ -12,9 +12,17 @@ class ProfileCollectionViewCell: UICollectionViewCell {
     static var reuseId = "ProfileCollectionViewCellID"
     static var nibName = "ProfileCollectionViewCell"
     
-    @IBOutlet weak var userImage: UIImageView!
+    var profileViewModel: ProfileViewModel? {
+        didSet {
+            setData()
+        }
+    }
     
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet var userName: UILabel!
+    
+    
+    
     // NOT READY YET WITH ALL FRAMES!!!!!
     override func awakeFromNib() { // NIB PE JO THA, WAHI UTHA LIYA
         super.awakeFromNib()
@@ -42,6 +50,13 @@ class ProfileCollectionViewCell: UICollectionViewCell {
             self.userImage.layer.cornerRadius = self.userImage.frame.width / 2.0
         }
         
+    }
+    
+    func setData() {
+        guard let name = profileViewModel?.firstName, let image = profileViewModel?.image else { return }
+        
+        userName.text = name
+        userImage.image = UIImage(named: image)
     }
     
 }
